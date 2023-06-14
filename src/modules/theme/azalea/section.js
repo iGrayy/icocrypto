@@ -60,3 +60,19 @@ export function SectionHead({title, subtitle, size = 'xl', children}) {
 		</div>
     );
 };
+
+
+/**
+ * Show section content area.
+ * @param {string} classes Custom classes.
+ * @param {boolean} hasBg Enable background or not.
+ * @param {*} children Children elements.
+ */
+export function SectionContent({classes, hasBg, children}) {
+    return (   
+        <div className='container container-xxl'>
+			<div className={`nk-block ${hasBg ? 'has-bg-image' : ''} ${classes}`}>{children}</div>
+		</div>
+    );
+};
+
