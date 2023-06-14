@@ -12,7 +12,10 @@ export function Banner({children}) {
 };
 
 /**
- * Show banner header area.
+ * Show banner header area. In case there are children elements,
+ * the banner header is divided into two column: the left includes title, caption, 
+ * and two cpn button while the right includes children elements. Otherwise, banner
+ * header is not divided and all its things are aligned at center.
  * @param {string} title Title of banner.
  * @param {string} caption Caption of banner.
  * @param {*} btn1 First CPN button.
@@ -78,5 +81,30 @@ export function BannerHead({title, caption, btn1, btn2, children}) {
                 </div>
             )}
         </div>
+    );
+};
+
+/**
+ * Show banner bottom area. This area is divided into
+ * two column left and right.
+ * @param {*} left Left area.
+ * @param {*} right Right area.
+ * @param {*} children Children elements. 
+ */
+export function BannerBottom({left, right, children}) {
+    return (
+        <div className='nk-block nk-block-status'>
+			<div className='container container-xxl'>
+				<div className='row gutter-vr-40px justify-content-between'>
+                    <div className='col-sm-4 col-md-6 col-lg-4 col-xl-5'>
+                        {left}
+                    </div>
+                    <div className='col-xxl-5 col-xl-6 col-lg-7 text-center text-sm-start'>
+                        {right}
+                    </div>
+                </div>
+                {children}
+			</div>
+		</div>
     );
 };
