@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import observerConfig from '@/config/observer';
 
+
 /**
  * Show section.
  * @param {string} id Section id.
@@ -32,5 +33,30 @@ export function Section({id, setActiveSection, children}) {
         <section ref={ref} className='section' id={id?.toLowerCase()}>
 			{children}
 		</section>
+    );
+};
+
+
+/**
+ * Show section header includes: title and subtitle.
+ * @param {string} title Title of section.
+ * @param {string} subtitle Subtitle of section.
+ * @param {string} size Size of title.
+ * @param {*} children Children elements. 
+ */
+export function SectionHead({title, subtitle, size = 'xl', children}) {
+    return (
+        <div className='container'>
+			<div className='row justify-content-center text-center'>
+				<div className='col-lg-6'>
+					<div className='section-head section-head-s2'>
+						<h2 className={`title title-${size}`} title={title}>
+							{children}
+						</h2>
+						{subtitle && <p>{subtitle}</p>}
+					</div>
+				</div>
+			</div>
+		</div>
     );
 };
