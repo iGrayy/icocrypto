@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #121212;
+}
+
+.navbar-header-overlay {
+	display: none;
+}
+
+.menu-item:hover .menu-sub {
+	display: block;
+}
+
+.block-partners {
+	padding-top: 70px;
+}
+
+@media only screen and (max-width: 500px) {
+	.roadmap-slider .swiper-slide:last-child {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.dropdown-menu {
+		position: static;
+	}
+
+	.dropdown-menu[data-bs-popper] {
+		margin-top: 0;
+	}
+
+	:not(.show) .navbar-header-overlay {
+		display: none;
+	}
+
+	.show .navbar-header-overlay {
+		position: fixed;
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-color: rgba(10, 18, 39, 0.5);
+	}
+
+	.menu-item:hover .menu-sub {
+		display: none;
+	}
+
+	.menu-item:hover .show ~ .menu-sub,
+	.show ~ .menu-sub {
+		display: block;
+	}
+}
