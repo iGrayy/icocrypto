@@ -108,3 +108,42 @@ export function BannerBottom({left, right, children}) {
 		</div>
     );
 };
+
+/**
+ * Show banner footer. Banner footer is divided into two column:
+ * the left one includes action buttons while the right one includes
+ * socials buttons.
+ * @param {*} buttons Action buttons.
+ * @param {*} socials Social buttons.
+ * @param {*} children Children elements. 
+ * @returns 
+ */
+export function BannerFooter({buttons, socials, children}) {
+    return (
+        <div className='nk-block nk-block-actions'>
+			<div className='container container-xxl'>
+				<div className='row gutter-vr-40px align-items-center'>
+                    <div className='col-sm-7 d-flex justify-content-center justify-content-sm-start'>
+			            <ul className='btn-grp btn-grp-break justify-content-center justify-content-sm-start gutter-vr-20px'>
+                            {(buttons instanceof Array) ? (
+                                buttons.map((button) => {return <li>{button}</li>})
+                            ) : (
+                                {buttons}
+                            )}
+			            </ul>
+		            </div>
+                    <div className='col-sm-5 d-flex justify-content-center justify-content-sm-end'>
+                        <ul className='social-links social-links-s2'>
+                            {(socials instanceof Array) ? (
+                                socials.map((button) => {return <li>{button}</li>})
+                            ) : (
+                                {socials}
+                            )}
+                        </ul>
+                    </div>
+                </div>
+                {children}
+			</div>
+		</div>
+    );
+}
