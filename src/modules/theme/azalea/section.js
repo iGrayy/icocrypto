@@ -76,3 +76,19 @@ export function SectionContent({classes, hasBg, children}) {
     );
 };
 
+
+/**
+ * Show section background image.
+ * @param {string} url Background URL.
+ * @param {string} alt Background alt. 
+ */
+export function SectionBackground({url, alt}) {
+    return (
+        <div
+			className={`bg-image bg-contain bg-bottom-center bg-${alt} overlay-fall bg-image-loaded`}
+			style={{ backgroundImage: `url(${url})` }}
+		>
+			<img src={url} alt={alt} />
+		</div>
+    );
+};
