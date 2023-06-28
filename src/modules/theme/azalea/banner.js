@@ -126,7 +126,7 @@ export function BannerFooter({buttons, socials, children}) {
                     <div className='col-sm-7 d-flex justify-content-center justify-content-sm-start'>
 			            <ul className='btn-grp btn-grp-break justify-content-center justify-content-sm-start gutter-vr-20px'>
                             {(buttons instanceof Array) ? (
-                                buttons.map((button) => {return <li>{button}</li>})
+                                buttons.map((button, index) => {return <li key={index}>{button}</li>})
                             ) : (
                                 {buttons}
                             )}
@@ -135,7 +135,7 @@ export function BannerFooter({buttons, socials, children}) {
                     <div className='col-sm-5 d-flex justify-content-center justify-content-sm-end'>
                         <ul className='social-links social-links-s2'>
                             {(socials instanceof Array) ? (
-                                socials.map((button) => {return <li>{button}</li>})
+                                socials.map((button, index) => {return <li key={index}>{button}</li>})
                             ) : (
                                 {socials}
                             )}
