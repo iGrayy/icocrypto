@@ -30,7 +30,7 @@ export function BannerHead({title, caption, btn1, btn2, children}) {
      * @returns boolean.
      */
     const isChildren = () => {
-        return Boolean(children.type() === null);
+        return Boolean(children === undefined || children.type() === null);
     }
 
     /**
