@@ -103,3 +103,17 @@ export function SectionTextArea({children}) {
 		<div className='nk-block-text'>{children}</div>
 	);
 };
+
+
+/**
+ * Show section layout as two column.
+ * @param {string} size Size between 2 column.
+ * @param {*} children Children elements.
+ */
+export function SectionSideBySide({children, size='xl'}) {
+	return (
+		<div className={`row align-items-center justify-content-center justify-content-${size}-between gutter-vr-40px`}>
+			{children}
+		</div>
+	);
+};
