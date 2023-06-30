@@ -92,3 +92,14 @@ export function SectionBackground({url, alt}) {
 		</div>
     );
 };
+
+
+/**
+ * Show section text area.
+ * @param {*} children Children elements.
+ */
+export function SectionTextArea({children}) {
+	return (
+		<div className='nk-block-text'>{children}</div>
+	);
+};
