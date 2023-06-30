@@ -21,7 +21,10 @@ export function ProgressPoint({title, percent}) {
  * @param {number} percent Current percent.
  * @param {children} children Children elements.
  */
-export function ProgressBar({title1, title2, value, value2, unit, percent, children}) {
+export function ProgressBar({title1, title2, value1, value2, unit, percent, children}) {
+	
+	const format = Intl.NumberFormat('en-US').format;
+
     return (
         <div className='progress-wrap progress-wrap-point'>
 			<ul className='progress-info progress-info-s2'>

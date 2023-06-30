@@ -96,7 +96,7 @@ export function BannerBottom({left, right, children}) {
         <div className='nk-block nk-block-status'>
 			<div className='container container-xxl'>
 				<div className='row gutter-vr-40px justify-content-between'>
-                    <div className='col-sm-4 col-md-6 col-lg-4 col-xl-5'>
+                    <div className='col-xxl-6 col-xl-5 col-lg-5'>
                         {left}
                     </div>
                     <div className='col-xxl-5 col-xl-6 col-lg-7 text-center text-sm-start'>

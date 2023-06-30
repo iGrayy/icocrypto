@@ -1,4 +1,14 @@
+import { useEffect, useState } from "react";
 
+
+/**
+ * Show countdown
+ * @param {string} title Countdown title
+ * @param {string} percent Countdown percent
+ * @param {string} subtitle Countdown subtitle
+ * @param {string} endDate Countdown end date  
+ * @returns 
+ */
 export function Countdown({title, percent, caption, subtitle, endDate}) {
     // Convert endDate to miliseconds
 	const end = new Date(endDate).getTime();
