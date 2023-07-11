@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Navbar from '@/modules/common/navbar';
 import Background from '@/modules/theme/azalea/background';
 import HomeBanner from './home/banner';
+import About from './home/about';
 
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
           <HomeBanner></HomeBanner>
         </header>
         <main className='nk-pages tc-light'>
+          <About></About>
           <Background></Background>
         </main>
       </div>
