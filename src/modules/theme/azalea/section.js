@@ -117,3 +117,20 @@ export function SectionSideBySide({children, size='xl'}) {
 		</div>
 	);
 };
+
+
+/**
+ * Show section button area
+ * @param {*} children Children elements.
+ */
+export function SectionButtonArea({children}) {
+	return (
+		<ul className='btn-grp gutter-30px gutter-vr-20px pdt-m'>
+			{(children instanceof Array) ? (
+                children.map((button, index) => {return <li key={index}>{button}</li>})
+            ) : (
+                {children}
+            )}
+		</ul>
+	);
+};
