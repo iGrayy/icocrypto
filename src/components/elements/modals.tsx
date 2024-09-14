@@ -42,36 +42,36 @@ export default function Modals({
   const modalPositionClass = position === 'center' ? 'modal-dialog-centered' : 
                              position === 'bottom' ? 'modal-dialog-bottom' : '';
 
-  const css = `
-    .modal-backdrop {
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-    .modal-backdrop.show {
-      opacity: 0.5;
-    }
-    .modal {
-      display: flex !important;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    }
-    .modal.show {
-      opacity: 1;
-      visibility: visible;
-    }
-    .modal-dialog {
-      transform: scale(0.9);
-      transition: transform 0.3s ease-in-out;
-    }
-    .modal.show .modal-dialog {
-      transform: scale(1);
-    }
-  `;
+  // const css = `
+  //   .modal-backdrop {
+  //     opacity: 0;
+  //     transition: opacity 0.3s ease-in-out;
+  //   }
+  //   .modal-backdrop.show {
+  //     opacity: 0.5;
+  //   }
+  //   .modal {
+  //     display: flex !important;
+  //     opacity: 0;
+  //     visibility: hidden;
+  //     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  //   }
+  //   .modal.show {
+  //     opacity: 1;
+  //     visibility: visible;
+  //   }
+  //   .modal-dialog {
+  //     transform: scale(0.9);
+  //     transition: transform 0.3s ease-in-out;
+  //   }
+  //   .modal.show .modal-dialog {
+  //     transform: scale(1);
+  //   }
+  // `;
 
   return (
     <>
-      <style>{css}</style>
+      {/* <style>{css}</style> */}
       <div
         className={`modal-backdrop fade ${open ? 'show' : ''}`}
         style={{ zIndex: 50 }}
